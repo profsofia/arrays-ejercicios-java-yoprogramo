@@ -10,7 +10,7 @@ public class ejercicio3 {
      String obtener_apellido[] = new String[4];
      try (Scanner dni = new Scanner(System.in)){
          for(int index_dni=0; index_dni<4; index_dni++){
-             System.out.println("Ingrese su DNI(sin puntos ni guiones)" + index_dni);
+             System.out.println("Ingrese su DNI(sin puntos ni guiones): ");
              //leemos el dato que ingresa el usuario
              long num_dni = dni.nextLong();
              //lo colocamos en una variable
