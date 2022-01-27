@@ -30,19 +30,23 @@ Nota: tener en cuenta que el promedio de goles puede dar como resultado un núme
                  jugadores_goles[i][j] = entrada.nextInt();
              }
          }*/
-         int goles = 0;
+         float suma = 0;
          System.out.print("\nIngrese los goles \n");
         for(int filas=0; filas<5; filas++){
             for(int columnas=0; columnas<3; columnas++){ 
-              int gol = entrada.nextInt();
-              goles = gol/3;
+              System.out.println("Los goles para el jugador: "+ (filas+1)+ " son= ");
+              vector_promedio[columnas] = entrada.nextInt();
+              suma += vector_promedio[columnas];
             }
-            System.out.println(vector_promedio[goles]);
-            System.out.println("");
-            System.out.println(jugadores_goles[filas][goles]);
         }
-        
-        //System.out.println("El promedio de goles es: "+ prom);
+        System.out.println(jugadores_goles);
+        System.out.println("el promedio es: ");
+        for (int i=0; i<vector_promedio.length; i++){
+            vector_promedio[i] = suma/3;
+            System.out.print(vector_promedio[i]+ ", ");
+        }
+
+    
     }
 
    }
